@@ -1,0 +1,92 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root, .app {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make app a column flex container */
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* prevent overall scroll */
+  }
+  
+  /* Navbar natural height, no shrink */
+  nav, /* if your navbar uses <nav> tag */
+  .custom-navbar { /* or a specific navbar class */
+    flex-shrink: 0;
+  }
+  
+  /* Main fills remaining height */
+  main {
+    flex-grow: 1;
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: auto; /* controlled by flex */
+    overflow: hidden; /* prevent page scroll */
+  }
+  
+  /* Left and right each take 50% width and full height */
+  main .left,
+  main .right {
+    flex-basis: 50%;
+    height: 100%;
+    border-radius: 0.7rem;
+    overflow: auto; /* scroll inside if needed */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Left position relative to position review button */
+  main .left {
+   
+    position: relative;
+  }
+  
+  /* Editor area fills left */
+  .left .code,
+  .code pre,
+  .code pre code {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    
+    background-color: rgb(22, 21, 21);
+    color: white;
+  }
+  
+  /* Right pane styling */
+  main .right {
+    background-color: rgb(75, 73, 73);
+    color: white;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Review button */
+  main .left .review {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgb(185, 185, 241);
+    color: black;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.7rem;
+  }
+  

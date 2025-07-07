@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root, .app {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make app container a flex column */
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* prevent page scroll */
+  }
+  
+  /* Navbar natural height (replace with your navbar container if different) */
+  nav, .custom-navbar {
+    flex-shrink: 0;
+  }
+  
+  /* Main fills the remaining space */
+  main {
+    flex-grow: 1;
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: auto; /* controlled by flexbox */
+    overflow: hidden;
+  }
+  
+  /* Left and right panels 50% width, full height */
+  main .left,
+  main .right {
+    flex-basis: 50%;
+    height: 100%;
+    border-radius: 0.7rem;
+    overflow: auto; /* scroll inside if content overflows */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Left position relative for button */
+  main .left {
+    position: relative;
+  }
+  
+  /* Editor styles for light */
+  .left .code,
+  .code pre,
+  .code pre code {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+   
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  /* Right pane styles for light */
+  main .right {
+    background-color: #ffffff;
+    color: black;
+    padding: 2rem 3rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Review button for light */
+  main .left .review {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.7rem;
+  }
+  

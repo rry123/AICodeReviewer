@@ -1,0 +1,226 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Default = Dark Theme */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  background-color: black;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Layout styles for both themes */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  /* background-color will be overridden by theme */
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  position: relative;
+  /* background-color overridden by theme */
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  /* background and color overridden by theme */
+}
+
+main .right {
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  overflow: auto;
+  /* background and color overridden by theme */
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  /* background and color overridden by theme */
+}
+
+/* ===== DARK THEME (DEFAULT) ===== */
+.app.dark main {
+  background-color: black;
+}
+
+.app.dark main .left {
+  background-color: black;
+}
+
+.app.dark .left .code,
+.app.dark .code pre,
+.app.dark .code pre code {
+  background-color: rgb(22, 21, 21);
+  color: white;
+}
+
+.app.dark main .right {
+  background-color: rgb(75, 73, 73);
+  color: white;
+}
+
+.app.dark main .left .review {
+  background-color: rgb(185, 185, 241);
+  color: black;
+}
+
+/* ===== LIGHT THEME ===== */
+.app.light main {
+  background-color: #f5f5f5;
+}
+
+.app.light main .left {
+  background-color: #ffffff;
+}
+
+.app.light .left .code,
+.app.light .code pre,
+.app.light .code pre code {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.app.light main .right {
+  background-color: #ffffff;
+  color: black;
+}
+
+.app.light main .left .review {
+  background-color: #007bff;
+  color: white;
+}
+
+
+main .left {
+  background-color: black;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: rgb(22, 21, 21);
+}
+
+main .right {
+  background-color: rgb(75, 73, 73);
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  overflow: auto;
+  color: white;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(185, 185, 241);
+  color: black;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+/* ✅ Light Theme Overrides */
+.app.light main {
+  background-color: #f5f5f5;
+}
+
+.app.light main .left {
+  background-color: #ffffff;
+}
+
+.app.light .left .code,
+.app.light .code pre,
+.app.light .code pre code {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.app.light main .right {
+  background-color: #ffffff;
+  color: black;
+}
+
+.app.light main .left .review {
+  background-color: #007bff;
+  color: white;
+}
